@@ -1,24 +1,74 @@
 # README
+![logo](https://user-images.githubusercontent.com/62282502/81537903-e096f600-93a8-11ea-83d6-fd819d4ec9f4.png)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+### 開発環境
 
 * Ruby version
+2.5.1
 
-* System dependencies
+* Database
+MySQL
 
-* Configuration
+* Rails
+5.2.4.2
 
-* Database creation
+:green_apple:エンジニア専用の特集サイト
 
-* Database initialization
+# フリマアプリDB設計
+## usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+|email|string|null: false, unique: true|
+|password|string|null: false|
+### Association
+- has_many :likes
+- has_many :posts, through :likes
+- has_many :user_groups
+- has_many :groups, through :user_groups
 
-* How to run the test suite
+## likesテーブル(中間)
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false|
+|post_id|integer|null: false|
+### Association
+- belongs_to :user
+- belongs_to :post
 
-* Services (job queues, cache servers, search engines, etc.)
+## postsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|content|text|null: false|
+|image|string|null: false|
+|user_id|integer|null: false|
+|group_id|integer|null: false|
+### Association
+- has_many :users, through :likes
 
-* Deployment instructions
+## user_groupsテーブル(中間)
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false|
+|group_id|integer|null: false|
+### Association
+- belongs_to :user
+- belongs_to :group
 
-* ...
+## groupsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+### Association
+- has_many :users, through :user_groups
+
+...
+⬇️⬇️⬇️いいね機能の参考になるかも
+## likesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|user|references|null: false, foreign_key: true|
+|item|references|null: false, foreign_key: true|
+### Association
+- belongs_to :user
+- belongs_to :item
