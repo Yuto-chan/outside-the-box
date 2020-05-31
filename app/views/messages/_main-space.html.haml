@@ -10,3 +10,10 @@
             %p.date 1997/02/28
             %p.text 芳根京子の生年月日
   .main-space__form
+    = form_with url:  do |form|
+      = form.text_field :email
+      = form.submit
+    -# .main-space__form__text-area
+    -#   .main-space__form__text-area__text
+    -#   .main-space__form__text-area__image
+    -# .main-space__form__send-btn
