@@ -9,11 +9,12 @@
           .main-space__chat-space__center__chat-room__one-info__text-box
             %p.date 1997/02/28
             %p.text 芳根京子の生年月日
-  .main-space__form
-    = form_with url:  do |form|
-      = form.text_field :email
-      = form.submit
-    -# .main-space__form__text-area
-    -#   .main-space__form__text-area__text
-    -#   .main-space__form__text-area__image
-    -# .main-space__form__send-btn
+.main-space__form
+  .main-space__form__all
+    = form_with url: "#" do |f|
+      = f.text_area :content, class: "text"
+      %label{class: "image-box"}
+        = icon('fas', 'image')
+        %input{type: "file", :class => "hidden"}
+      = f.submit "送信", class: "send-btn", id: "images"
+
