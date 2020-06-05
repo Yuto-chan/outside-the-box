@@ -1,5 +1,5 @@
 # README
-![logo](https://user-images.githubusercontent.com/62282502/81537903-e096f600-93a8-11ea-83d6-fd819d4ec9f4.png)
+
 
 ### 開発環境
 
