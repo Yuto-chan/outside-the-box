@@ -11,7 +11,7 @@
             %p.text 芳根京子の生年月日
 .main-space__form
   .main-space__form__all
-    = form_with url: "#" do |f|
+    = form_with model: [@group, @message] do |f|
       = f.text_area :content, class: "text"
       %label{class: "image-box"}
         = icon('fas', 'image')
