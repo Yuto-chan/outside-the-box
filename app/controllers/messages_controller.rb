@@ -9,7 +9,7 @@ class MessagesController < ApplicationController
   def create
     @message = @group.messages.new(message_params)
     if @message.save
-      redirect_to group_messages_path(@group), notice:
+      redirect_to group_messages_path(@group), notice: 'メッセージが送信されました'
     else
       @messages = @group.messages.includes(:user)
       flash.now[:alert] = 'メッセージを入力して下さい'
@@ -17,15 +17,15 @@ class MessagesController < ApplicationController
     end
   end
 
-    private
+  private
 
-    def message_params
-      params.require(:message).permit(:content, :image).merge(user_id: current_user.id)
-    end
+  def message_params
+    params.require(:message).permit(:content, :image).merge(user_id: current_user.id)
+  end
         # 現在ログイン中のユーザーIDをparamsで取得できるようにしている？⬆️
     
-    def set_group
-      @group = Group.find(params[:group_id])
-    end
+  def set_group
+    @group = Group.find(params[:group_id])
+  end
 
 end
