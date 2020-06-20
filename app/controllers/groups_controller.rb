@@ -1,7 +1,8 @@
 class GroupsController < ApplicationController
 
-  def show
-    @group = Group.find(params[:id])
+  def index
+    # @group = Group.find(params[:id])
+    @group = Group.all
   end
 
 end
