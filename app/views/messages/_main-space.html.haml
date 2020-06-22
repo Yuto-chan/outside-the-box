@@ -8,8 +8,8 @@
             %p.name 
             -# = @messages.user.name
           .main-space__chat-space__center__chat-room__one-info__text-box
-            %p.date 
             - @messages.each do |m|
+              %p.date 
               = m.created_at.strftime("%Y年%m月%d日 %H時%M分")
               = m.content
               %p.text
@@ -25,4 +25,4 @@
         = icon('fas', 'image')
         %input{type: "file", :class => "hidden"}
       = f.submit "送信", class: "send-btn", id: "images"
--# = form_with model: nil do |f|
+
