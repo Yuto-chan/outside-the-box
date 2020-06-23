@@ -1,8 +1,0 @@
-.main-space__form
-  .main-space__form__all
-    = form_with url: "#" do |f|
-      = f.text_area :content, class: "text"
-      %label{class: "image-box"}
-        = icon('fas', 'image')
-        %input{type: "file", :class => "hidden"}
-      = f.submit "送信", class: "send-btn", id: "images"
