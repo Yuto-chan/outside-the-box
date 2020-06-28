@@ -2,17 +2,17 @@
   .main-space__chat-space
     .main-space__chat-space__center
       .main-space__chat-space__center__chat-room
-        .main-space__chat-space__center__chat-room__one-info
-          - @messages.each do |m|
-            .main-space__chat-space__center__chat-room__one-info__user-box
+        - @messages.each do |m|
+          .main-space__chat-space__center__chat-room__wrapper
+            .main-space__chat-space__center__chat-room__wrapper__user-box
               %p.icon
               %p.name 
             -# = @messages.user.name
-            .main-space__chat-space__center__chat-room__one-info__text-box
+            .main-space__chat-space__center__chat-room__wrapper__text-box
               %p.date 
-              = m.created_at.strftime("%Y年%m月%d日 %H時%M分")
-              = m.content
+                = m.created_at.strftime("%Y年%m月%d日 %H時%M分")
               %p.text
+                = m.content
               -# = @messages.created_at.strftime("%Y年%m月%d日 %H時%M分")
             -# %p.text
               -# - @messages.each do |message|
