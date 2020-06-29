@@ -27,8 +27,9 @@
         height: 100%;
         
         li {
-          background-color: forestgreen;
-          height: 33%;
+          color: beige;
+          background-color: darkseagreen;
+          height: 50%;
           text-align: center;
           line-height: 53px;
           border-bottom-style: solid;
@@ -42,103 +43,29 @@
   }
 
   .main-space {
-    // background-color: blue;
-    // height: calc(100vh - 120px);
-    height: 550px;
-    // width: 100%;
-    &__chat-space {
-      height: 100%;
-      background-color: lightgoldenrodyellow;
-      &__center {
-        background-color: cornflowerblue;
-        height: 100%;
-        width: 60%;
-        margin: 0 auto;
-        &__chat-room {
-          background-color: cornflowerblue;
-          height: 100%;
-          width: 70%;
-          margin: 0 auto;
-          &__one-info {
-            // background-color: lightgreen;
-            height: 132px;
-            width: 400px;
-            display: flex;
-            padding-top: 20px;
-            &__user-box {
-              // background-color: lightseagreen;
-              height: 100%;
-              width: 90px;
-              .icon {
-                background-color: yellowgreen;
-                height: 40%;
-                width: 60px;
-                margin-left: 16px;
-                border-radius: 48px;
-              }
-              .name {
-                // background-color: maroon;
-                height: 20%;
-                text-align: center;
-              }
-            }
-            &__text-box {
-              background-color: yellowgreen;
-              height: 100%;
-              width: calc(100% - 90px);
-              border-radius: 33px;
-              .date {
-                height: 30px;
-                // background-color: mediumturquoise;
-                padding-left: 180px;
-                line-height: 41px;
-                font-style: italic;
-              }
-              .text {
-                height: calc(100% - 30px);
-                padding-left: 20px;
-              }
-            }
-          }
-        }
+    height: 792px;
+    background-color: ghostwhite;
+    h2 {
+      font-size: 29px;
+      font-spacing: 14px;
+      letter-spacing: 13px;
+      margin: 0 auto;
+      padding-top: 50px;
+      text-align: center;
+    }
+    table {
+      // width: 510px;
+      width: 919px;
+      height: 150px;
+      border-collapse: separate;
+      // margin-left: 515px;
+      margin-left: 387px;
+      font-size: 19px;
+      margin-top: 14px;
+      td {
+        border-bottom: thin solid lightgray;
+        font-style: italic;
       }
     }
-    &__form {
-      height: 106px;
-      width: 1440px;
-      display: flex;
-      background-color: #ddd;
-      &__all {
-        width: 100%;
-        position: relative;
-        .text {
-          width: 50%;
-          position: absolute;
-          top: 30px;
-          left: 335px;
-          border-radius: 28px;
-        }
-        .image-box {
-          position: absolute;
-          top: 47px;
-          left: 1011px;
-          .hidden {
-            display: none;
-          }
-        }
-        .send-btn {
-          height: 50px;
-          width: 100px;
-          border-radius: 25px;
-          background-color: forestgreen;
-          color: white;
-          position: absolute;
-          top: 30px;
-          left: 1090px;
-        }
-      }
   }
 }
-}
-
-
