@@ -5,6 +5,7 @@
     %tr
       %td.a 言語
       %td.b ドイツ語
+      = @group.used_language
     %tr
       %td.a 宿泊スタイル
       %td.b アパート
@@ -33,7 +34,7 @@
       %td.e 国の特殊事情(circumstance)
       %td.f 現在、一時的に就労ビザが新規発行停止されている
   .main-space__chat-space
-    - @group.each do |g|
+    - @groups.each do |g|
       .main-space__chat-space__below
         = link_to group_messages_path(g) do
           = g.name + '本音chat欄へ行く'
