@@ -14,6 +14,14 @@ ActiveRecord::Schema.define(version: 2020_06_04_081212) do
 
   create_table "groups", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
+    t.text "used_language"
+    t.text "accommodation"
+    t.string "food"
+    t.string "language_policy"
+    t.text "education"
+    t.string "visa"
+    t.string "servise"
+    t.text "special_circumstances"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["name"], name: "index_groups_on_name", unique: true

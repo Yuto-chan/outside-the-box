@@ -3,36 +3,37 @@
   %h2 一般
   %table
     %tr
-      %td.1 言語
-      %td.1b ドイツ語
+      %td.a 言語
+      %td.b ドイツ語
     %tr
-      %td.2 宿泊スタイル
-      %td.2b アパート
+      %td.a 宿泊スタイル
+      %td.b アパート
     %tr
-      %td.3 日本食レストラン(food)
-      %td.3b 日本食レストラン多数
+      %td.a 日本食レストラン(food)
+      %td.b 日本食レストラン多数
 
   %h2 条件
   %table
     %tr
-      %td.1 言語
-      %td.1b 英語
+      %td.c 言語
+      %td.d 英語
     %tr
-      %td.2 学歴
-      %td.2b IT関連の学科(いわゆるコンピューターサイエンス学科)の卒業証明
+      %td.c 学歴
+      %td.d IT関連の学科(いわゆるコンピューターサイエンス学科)の卒業証明
     %tr
-      %td.3 ビザ
-      %td.3b H-1Bビザ/O-1Aビザ/E-2
+      %td.c ビザ
+      %td.d H-1Bビザ/O-1Aビザ/E-2
 
   %h2 その他
   %table
     %tr
-      %td.1 よく使われるリクルートサービス(servise)
-      %td.1 LinkedIn
+      %td.e よく使われるリクルートサービス(servise)
+      %td.f LinkedIn
     %tr
-      %td.2 国の特殊事情(circumstance)
-      %td.2 現在、一時的に就労ビザが新規発行停止されている
-  -# .main-space__chat-space
-  -#   - @group.each do |g|
-  -#     = link_to group_messages_path(g) do
-  -#       = g.name + '本音chat欄'
+      %td.e 国の特殊事情(circumstance)
+      %td.f 現在、一時的に就労ビザが新規発行停止されている
+  .main-space__chat-space
+    - @group.each do |g|
+      .main-space__chat-space__below
+        = link_to group_messages_path(g) do
+          = g.name + '本音chat欄へ行く'
