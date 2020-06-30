@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   root "groups#index"
   # get 'messages/index'
   resources :users, only: [:edit, :update] 
-  resources :groups, only: [:index, :show] do
+  resources :groups, only: [:index] do
     resources :messages, only: [:index, :create]
   end
 end

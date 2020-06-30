@@ -1,38 +1,43 @@
 
 .main-space
-  %h2 一般
-  %table
-    %tr
-      %td.a 言語
-      %td.b ドイツ語
-      = @group.used_language
-    %tr
-      %td.a 宿泊スタイル
-      %td.b アパート
-    %tr
-      %td.a 日本食レストラン(food)
-      %td.b 日本食レストラン多数
+  - @groups.each do |g|
+    %h1 
+      = g.name
+    %h2 一般
+    %table
+      %tr
+        %td.a 言語
+        %td.b 
+          = g.used_language
+          -# = @group1.used_language
+      %tr
+        %td.a 宿泊スタイル
+        %td.b アパート
+      %tr
+        %td.a 日本食レストラン(food)
+        %td.b 日本食レストラン多数
 
-  %h2 条件
-  %table
-    %tr
-      %td.c 言語
-      %td.d 英語
-    %tr
-      %td.c 学歴
-      %td.d IT関連の学科(いわゆるコンピューターサイエンス学科)の卒業証明
-    %tr
-      %td.c ビザ
-      %td.d H-1Bビザ/O-1Aビザ/E-2
+    %h2 条件
+    %table
+      %tr
+        %td.c 言語
+        %td.d 英語
+      %tr
+        %td.c 学歴
+        %td.d IT関連の学科(いわゆるコンピューターサイエンス学科)の卒業証明
+      %tr
+        %td.c ビザ
+        %td.d H-1Bビザ/O-1Aビザ/E-2
 
-  %h2 その他
-  %table
-    %tr
-      %td.e よく使われるリクルートサービス(servise)
-      %td.f LinkedIn
-    %tr
-      %td.e 国の特殊事情(circumstance)
-      %td.f 現在、一時的に就労ビザが新規発行停止されている
+    %h2 その他
+    %table
+      %tr
+        %td.e よく使われるリクルートサービス(servise)
+        %td.f LinkedIn
+      %tr
+        %td.e 国の特殊事情(circumstance)
+        %td.f 現在、一時的に就労ビザが新規発行停止されている
+  end
   .main-space__chat-space
     - @groups.each do |g|
       .main-space__chat-space__below
