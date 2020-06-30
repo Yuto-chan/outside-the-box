@@ -1,9 +1,10 @@
 class GroupsController < ApplicationController
 
   def index
-    # @group = Group.find(params[:id])
-    @group = Group.all
-    
+    @groups = Group.all
+    @group1 = Group.first
+    @group2 = Group.second
+    @group3 = Group.third
   end
 
 end
