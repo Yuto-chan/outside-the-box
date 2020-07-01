@@ -1,14 +1,14 @@
 .main-space
-  .main-space__chat-space
-    .main-space__chat-space__center
-      .main-space__chat-space__center__chat-room
+  .main-space__chat
+    .main-space__chat__center
+      .main-space__chat__center__chat-room
         - @messages.each do |m|
-          .main-space__chat-space__center__chat-room__wrapper
-            .main-space__chat-space__center__chat-room__wrapper__user-box
+          .main-space__chat__center__chat-room__wrapper
+            .main-space__chat__center__chat-room__wrapper__user-box
               %p.icon
               %p.name 
             -# = @messages.user.name
-            .main-space__chat-space__center__chat-room__wrapper__text-box
+            .main-space__chat__center__chat-room__wrapper__text-box
               %p.date 
                 = m.created_at.strftime("%Y年%m月%d日 %H時%M分")
               %p.text
