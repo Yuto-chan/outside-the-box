@@ -2,11 +2,10 @@
   .upper-bar__country-name
     %h2 
       -# = @group.name
-      ドイツ
+      各国の情報
   .upper-bar__options
     %ul
-      %li マイページ
-      -# = link_to edit_user_path
-      %li ログアウト
-      -# %li 国一覧
-      -# %li この国の詳細
+      %li
+        -# = link_to "マイページ", edit_user_path(current_user) do
+      %li 
+        = link_to "ログアウト", destroy_user_session_path, method: :delete
