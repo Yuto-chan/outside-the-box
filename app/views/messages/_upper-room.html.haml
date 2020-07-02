@@ -1,10 +1,11 @@
-.upper-bar
-  .upper-bar__country-name
+.upper-room
+  .upper-room__country-name
     %h2 
       = @group.name
-  .upper-bar__options
+  .upper-room__options
     %ul
-      %li マイページ
+      %li 
+        = link_to "マイページ", edit_user_path(current_user)
       %li 
         = link_to "ログアウト", destroy_user_session_path, method: :delete
       -# %li 国一覧

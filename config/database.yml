@@ -49,6 +49,9 @@ test:
 #
 production:
   <<: *default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
   database: outside-the-box_production
   username: outside-the-box
   password: <%= ENV['OUTSIDE-THE-BOX_DATABASE_PASSWORD'] %>
