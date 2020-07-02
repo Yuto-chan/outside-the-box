@@ -6,6 +6,7 @@
   .upper-bar__options
     %ul
       %li
-        -# = link_to "マイページ", edit_user_path(current_user) do
+        = link_to "マイページ", edit_user_path(current_user) 
+        -# = link_to "マイページ", users/:id/edit
       %li 
         = link_to "ログアウト", destroy_user_session_path, method: :delete
