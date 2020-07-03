@@ -5,9 +5,9 @@
         - @messages.each do |m|
           .main-room__chat__center__chat-room__wrapper
             .main-room__chat__center__chat-room__wrapper__user-box
-              %p.icon
+              -# %p.icon
               %p.name 
-            -# = @messages.user.name
+                = m.user.name
             .main-room__chat__center__chat-room__wrapper__text-box
               %p.date 
                 = m.created_at.strftime("%Y年%m月%d日 %H時%M分")
