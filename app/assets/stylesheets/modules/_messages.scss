@@ -28,8 +28,9 @@
         height: 100%;
         
         li {
-          background-color: forestgreen;
-          height: 33%;
+          color: beige;
+          background-color: darkseagreen;
+          height: 50%;
           text-align: center;
           line-height: 53px;
           border-bottom-style: solid;
@@ -37,6 +38,15 @@
           border-bottom-width: thin;
           font-weight: bold;
           border-bottom-left-radius: 26px;
+          a {
+            color: papayawhip;
+            text-decoration: none;
+            font-size: 18px; 
+            opacity: 1;
+          }
+          a:hover {
+            opacity: 0.6;
+          }
         }
       }
     }
