@@ -25,6 +25,7 @@
       = f.text_area :content, class: "text"
       %label{class: "image-box"}
         = icon('fas', 'image')
-        %input{type: "file", :class => "hidden"}
+        -# %input{type: "file", :class => "hidden"}
+        = f.file_field :image, class: "hidden", type: "file"
       = f.submit "送信", class: "send-btn", id: "images"
 

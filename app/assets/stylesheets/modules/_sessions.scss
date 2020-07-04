@@ -1,0 +1,28 @@
+.guest-btn {
+  display: inline-block;
+  height: 50px;
+  padding: 0 30px;
+  line-height: 50px;
+  letter-spacing: 1px;
+  text-align: center;
+  border: none;
+  border-radius: 2px;
+  background-color: cornflowerblue;
+  margin-left: 563px;
+  opacity: 1;
+  a {
+    text-decoration: none;
+    color: white;
+    background-color: cornflowerblue;
+  }
+}
+.guest-btn:hover {
+  opacity: 0.6;
+}
+.btn {
+  opacity: 1;
+  text-decoration: none;
+}
+.btn:hover {
+  opacity: 0.6;
+}
