@@ -14,11 +14,14 @@
               %p.text
                 = m.content
               %p.image
-                = m.image
-              -# = @messages.created_at.strftime("%Y年%m月%d日 %H時%M分")
-            -# %p.text
-              -# - @messages.each do |message|
-              -#   = render partial: "message", locals: { message: message }
+                = image_tag m.image.url, size: "200x200" if m.image.present?
+            -# .main-room__chat__center__chat-room__wrapper__image-box
+            -#   = image_tag m.image.url, size: "200x200" if m.image.present?
+
+
+                
+                -# = image_tag message.image, if message.image.present?
+                -# = m.image
 .main-room__form
   .main-room__form__all
     = form_with model: [@group, @message] do |f|
@@ -27,5 +30,6 @@
         = icon('fas', 'image')
         -# %input{type: "file", :class => "hidden"}
         = f.file_field :image, class: "hidden", type: "file"
+        
       = f.submit "送信", class: "send-btn", id: "images"
 
