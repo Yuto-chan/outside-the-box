@@ -62,11 +62,13 @@
         height: 100%;
         width: 60%;
         margin: 0 auto;
+        padding-bottom: 63px;
         &__chat-room {
           background-color: lavender;
           height: 100%;
           width: 70%;
           margin: 0 auto;
+          overflow: auto;
           &__wrapper {
             display: flex;
             padding-top: 25px;
@@ -91,13 +93,16 @@
               margin-left: 17px;
               border-radius: 12px;
               .date {
-                padding-left: 167px;
+                padding-left: 248px;
                 font-size: 11px;
                 font-style: italic;
               }
               .text {
                 padding-left: 7px;
                 margin: 7px 6px;
+              }
+              .image {
+                margin-left: 97px;
               }
             }
           }
