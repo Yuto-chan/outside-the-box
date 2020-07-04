@@ -50,7 +50,7 @@ test:
 production:
   <<: *default
   adapter: mysql2
-  encoding: unicode
+  encoding: utf8
   pool: 5
   database: outside-the-box_production
   username: outside-the-box
