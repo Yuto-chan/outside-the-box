@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   # root "messages#index"
   root "groups#index"
   # get 'messages/index'
+  post '/groups/guest_sign_in', to: 'groups#new_guest'
   resources :users, only: [:edit, :update] 
   resources :groups, only: [:index] do
     resources :messages, only: [:index, :create]
