@@ -27,5 +27,6 @@
         = icon('fas', 'image')
         -# %input{type: "file", :class => "hidden"}
         = f.file_field :image, class: "hidden", type: "file"
+        -# = image_tag(, heigth: 200px, width: 200px)
       = f.submit "送信", class: "send-btn", id: "images"
 
