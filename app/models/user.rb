@@ -11,6 +11,7 @@ class User < ApplicationRecord
   has_many :messages
 
   def self.guest
+    logger.debug("入りました")
     find_or_create_by!(email: 'guest@example.com') do |user|
       user.password = SecureRandom.urlsafe_base64
       user.name = "guest"
