@@ -9,6 +9,7 @@ class User < ApplicationRecord
   has_many :user_groups
   has_many :groups, through: :user_groups
   has_many :messages
+  has_many :likes, dependent: :destroy
 
   def self.guest
     find_or_create_by!(email: 'guest@example.com') do |user|
