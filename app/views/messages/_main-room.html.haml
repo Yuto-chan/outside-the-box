@@ -15,6 +15,9 @@
                 = m.content
               %p.image
                 = image_tag m.image.url, size: "200x200" if m.image.present?
+              %p.like
+                = render "likes/like"
+                -# = render "likes/like", message: message
 .main-room__form
   .main-room__form__all
     = form_with model: [@group, @message] do |f|
