@@ -73,3 +73,4 @@ gem 'mini_magick'
 group :production do
   gem 'pg'
 end
+gem 'font-awesome-rails'
