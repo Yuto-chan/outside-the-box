@@ -11,7 +11,9 @@ Rails.application.routes.draw do
   root "groups#index"
   resources :users, only: [:edit, :update] 
   resources :groups, only: [:index] do
-    resources :messages, only: [:index, :create]
+    resources :messages, only: [:index, :create] do
+      resources :likes, only: [:create, :destroy]
+    end
   end
-  resources :likes, only: [:create, :destroy]
+  # resources :likes, only: [:create, :destroy]
 end
