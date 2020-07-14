@@ -87,9 +87,13 @@
         font-style: italic;
       }
       .d {
+        padding-top: 17px;
+        padding-bottom: 4px;
         width: 432px;
       }
       .f {
+        padding-top: 17px;
+        padding-bottom: 4px;
         width: 426px;
       }
     }
@@ -101,6 +105,8 @@
       &__below {
         a {
           // text-decoration: none;
+          padding-top: 17px;
+          padding-bottom: 4px;
           font-weight: bold;
           color: crimson;
           font-size: 22px;
