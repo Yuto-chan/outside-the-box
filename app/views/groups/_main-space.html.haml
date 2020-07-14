@@ -14,28 +14,32 @@
         %td.b アパート
       %tr
         %td.a 日本食レストラン(food)
-        %td.b 日本食レストラン多数
-
+        %td.b 
+          = g.food
     %h2 条件
     %table
       %tr
         %td.c 言語
-        %td.d 英語
+        %td.d 
+          = g.language_policy
       %tr
         %td.c 学歴
-        %td.d IT関連の学科(いわゆるコンピューターサイエンス学科)の卒業証明
+        %td.d 
+          = g.education
       %tr
         %td.c ビザ
-        %td.d H-1Bビザ/O-1Aビザ/E-2
-
+        %td.d 
+          = g.visa
     %h2 その他
     %table
       %tr
         %td.e よく使われるリクルートサービス(servise)
-        %td.f LinkedIn
+        %td.f 
+          = g.servise
       %tr
         %td.e 国の特殊事情(circumstance)
-        %td.f 現在、一時的に就労ビザが新規発行停止されている
+        %td.f 
+          = g.special_circumstances
   .main-space__chat-space
     - @groups.each do |g|
       .main-space__chat-space__below
