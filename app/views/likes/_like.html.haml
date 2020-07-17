@@ -3,7 +3,7 @@
   - if message.iine?(current_user)
     = form_for(message.likes.find_by(user_id: current_user.id), method: :delete, remote: true) do |f|
       = icon("fa", "heart-o")
-      -# = button_tag(class: "fa fa-heart-o")
+      
   - else
     = form_for(message.likes.build, remote: true) do |f|
       = hidden_field_tag :message_id, message.id
