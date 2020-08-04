@@ -80,22 +80,24 @@
       margin-left: 387px;
       font-size: 19px;
       margin-top: 14px;
-      td {
-        border-bottom: thin solid lightgray;
-        font-style: italic;
-      }
-      .b {
-        padding-left: 200px;
-      }
-      .d {
-        padding-top: 17px;
-        padding-bottom: 4px;
-        width: 432px;
-      }
-      .f {
-        padding-top: 17px;
-        padding-bottom: 4px;
-        width: 426px;
+      tr {
+        td {
+          border-bottom: thin solid lightgray;
+          font-style: italic;
+        }
+        .b {
+          padding-left: 200px;
+        }
+        .d {
+          padding-top: 17px;
+          padding-bottom: 4px;
+          width: 432px;
+        }
+        .f {
+          padding-top: 17px;
+          padding-bottom: 4px;
+          width: 426px;
+        }
       }
     }
     &__chat-space {
