@@ -1,7 +1,16 @@
 .account-page {
+  padding-top: 100px;
+  h1 {
+    font-weight: bold;
+    color: cornflowerblue;;
+    font-size: 42px;
+    letter-spacing: 16px;
+    font-style: italic;
+    text-align: center;
+  }
   .account-page__inner {
     width: 980px;
-    margin: 60px auto;
+    margin: 39px auto;
     padding: 60px;
     background-color: #fff;
     border: 1px solid #ddd;
